@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SoundScapes</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+    
+        <div class="header">
+            <h1 class="heading">SoundScapes</h1>
+            <p>Study | Code | Listen</p>
+        </div>
+        <div class="all-buttons">
+            <div class="buttons">
+                <div data-key="49" class="btn btn-1"
+                onclick="playSoundClick1(0); playSoundClick2(1); playSoundClick3(1); playSoundClick4(1); playSoundClick5(1)">
+                    <p>Birds</p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <div data-key="50" class="btn btn-2" onclick="playSoundClick1(1); playSoundClick2(0); playSoundClick3(1); playSoundClick4(1); playSoundClick5(1)">
+                    <p>Campfire</p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <div data-key="51" class="btn btn-3" onclick="playSoundClick1(1); playSoundClick2(1); playSoundClick3(0); playSoundClick4(1); playSoundClick5(1)">
+                    <p>Forest</p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <div data-key="52" class="btn btn-4" onclick="playSoundClick1(1); playSoundClick2(1); playSoundClick3(1); playSoundClick4(0); playSoundClick5(1)">
+                    <p>Ocean</p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <div data-key="53" class="btn btn-5" onclick="playSoundClick1(1); playSoundClick2(1); playSoundClick3(1); playSoundClick4(1); playSoundClick5(0)">
+                    <p>Storm</p>
+                </div>
+            </div>
+        </div><!--all-buttons-->
+        <div class="last-button">
+            <div class="stop-btn" onclick="playSoundClick1(1); playSoundClick2(1); playSoundClick3(1); playSoundClick4(1); playSoundClick5(1)">          
+                <p>Stop</p>  
+            </div>
+        </div>
+        
+    </div><!--container-->
+
+
+
+
+    <!-- AUDIO -->
+
+    <!-- Nature Sounds -->
+    <audio id="audio-1" data-key="49" src="/audio/nature/Bird Ambience.mp3"></audio>
+    <audio id="audio-2" data-key="50" src="/audio/nature/Campfire.mp3"></audio>
+    <audio id="audio-3" data-key="51" src="/audio/nature/Forest 2.mp3"></audio>
+    <audio id="audio-4" data-key="52" src="/audio/nature/Ocean Waves.mp3"></audio>
+    <audio id="audio-5" data-key="53" src="/audio/nature/Thunderstorm.mp3"></audio>
+
+    <!-- Lifestyle Sounds -->
+
+    <!-- Sci-Fi Sounds -->
+    <script src="script.js"></script>
+    <footer>
+        <script>  </script>
+    </footer>
+</body>
+</html>

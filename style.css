@@ -1,0 +1,292 @@
+/* COLOR VARS */
+:root {
+    --soot-text: rgb(34, 34, 34);
+    --ash-text: rgb(243, 243, 243);
+    --page-bg: linear-gradient(to right bottom, rgba(107, 255, 206, 0.2), rgba(114, 262, 213, 0.2), rgba(128, 276, 227, 0.2), rgba(128, 276, 227, 0.2), rgba(135, 283, 234, 0.2));
+    --main-btn-bg: linear-gradient(to left top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7));
+    --header-bg: linear-gradient(to right bottom, rgba(49, 49, 49, 0.25), rgba(48, 48, 48, 0.25), rgba(46, 46, 46, 0.25), rgba(45, 45, 45, 0.25), rgba(44, 44, 44, 0.25));
+    --main-btn-border: 2px solid rgb(105, 105, 105);
+    --playing-bg: linear-gradient(to right bottom, rgba(107, 255, 206, 0.8), rgba(114, 262, 213, 0.8), rgba(128, 276, 227, 0.8), rgba(128, 276, 227, 0.8), rgba(135, 283, 234, 0.8));
+    --playing-border: 2px solid rgba(247, 247, 247, 0.8);
+    --stop-bg: linear-gradient(to right bottom, rgba(253, 109, 131, 0.95), rgba(255, 100, 123, 0.95), rgba(255, 82, 108, 0.95));
+    --stop-btn-border: 2px solid rgba(56, 56, 56, 0.8);
+}
+
+
+/* TEXTURE VARS */
+:root {
+    --wall-texture: url(images/textures/dappled_wall.jpg);
+    --water-drops: url(images/textures/water_droplets.jpg);
+}
+
+/* BG-PIC VARS */
+:root {
+    --bird-bg: url(images/1_birds.jpg);
+    --campfire-bg: url(images/2_campfire.jpg);
+    --forest-bg: url(images/3_forest.jpg);
+    --ocean-bg: url(images/4_ocean.jpg);
+    --storm-bg: url(images/5_storm.jpg);
+}
+
+html {
+    background: rgb(31, 31, 31);
+    background-image: var(--page-bg), var(--water-drops);
+    background-size: cover;
+    color: var(--soot-text);
+    font-family: 'Lato', 'Roboto',  sans-serif;
+    font-size: 16px;
+    
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 5fr 2fr 3fr;
+}
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    align-self: end;
+    text-align: center;
+    color: var(--ash-text);
+    text-shadow: 1px 1px 2px rgba(102, 102, 102, 0.678);
+    width: 45vw;
+    background-image: var(--header-bg);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.heading {
+    font-size: 5.5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.header p {
+    font-size: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+.all-buttons {
+    text-shadow: 1px 1px 1px rgba(173, 173, 173, 0.315);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.buttons {
+    padding: 10px 40px;
+}
+
+.btn {
+    background-image: var(--main-btn-bg);
+    width: 175px;
+    padding: 0;
+    border: var(--main-btn-border);
+    border-radius: 15px;
+    position: relative;   
+    box-shadow: 1px 1px 3px 1px #666666;
+    transition: .25s all;
+    backface-visibility: hidden;
+    user-select: none;
+}
+
+.btn:hover {
+    box-shadow: 1.1px 1.1px 3px 1px #666666;
+    transform: scale(1.03);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn p {
+    font-size: 1.25rem;
+}
+
+.playing {
+    background-image: var(--playing-bg);
+    border: var(--playing-border);
+}
+
+.last-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.stop-btn {
+    background-image: var(--stop-bg);
+    padding: 2rem 5rem;
+    height: 0;
+    border: var(--stop-btn-border);
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px 1px #666666;
+    transition: .2s all;
+    backface-visibility: hidden;
+    user-select: none;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.stop-btn p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -135%);
+}
+
+.stop-btn:hover {
+    box-shadow: 1.1px 1.1px 3px 1px #666666;
+    transform: scale(1.02);
+}
+
+.stop-btn:active {
+    transform: translateY(1px);
+}
+
+/* SWITCHABLE BACKGROUNDS */
+
+.birds-bg {
+    background-image: var(--page-bg), var(--bird-bg);
+    background-size: cover;
+}
+
+.campfire-bg {
+    background-image: var(--page-bg), var(--campfire-bg);
+    background-size: cover;
+}
+
+.forest-bg {
+    background-image: var(--page-bg), var(--forest-bg);
+    background-size: cover;
+}
+
+.ocean-bg {
+    background-image: var(--page-bg), var(--ocean-bg);
+    background-size: cover;
+}
+
+.storm-bg {
+    background-image: var(--page-bg), var(--storm-bg);
+    background-size: cover;
+}
+
+/* MEDIA QUERIES */
+
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 685px) and (max-width: 1024px) {
+  
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        grid-template-rows: 2fr 4fr 2fr;
+    }
+
+    .header {
+        width: 50vw;
+        padding: 0;
+        margin-top: 1vh;
+    }
+
+    .heading {
+        font-size: 4rem;
+    }
+
+    .header p {
+        font-size: 1.75rem;
+    }
+
+    .all-buttons {
+        flex-direction: column;
+    }
+
+    .birds-bg {
+        background-position: 60%, 50%;
+    }
+
+    .campfire-bg {
+        background-position: 60%, 50%;
+}
+    
+  }
+  
+
+
+
+/*
+  In-Betweeners
+*/
+
+
+@media (min-width: 481px) and (max-width: 684px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    .header {
+        width: 75vw;
+        font-size: 4rem;
+    }
+
+}
+
+/* 
+  ##Device = Most Smartphones (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        grid-template-rows: 1fr 4fr 2fr;
+    }
+
+    .header {
+        width: 95vw;
+        padding: 0;
+        margin-top: 1vh;
+    }
+
+    .heading {
+        font-size: 4rem;
+    }
+
+    .header p {
+        font-size: 1.75rem;
+    }
+
+    .birds-bg {
+        background-position: 60%, 50%;
+    }
+
+    .campfire-bg {
+        background-position: 60%, 50%;
+}
+
+  }
