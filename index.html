@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SoundScapes</title>
@@ -10,52 +12,54 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
     <div class="container">
-    
+
         <div class="header">
             <h1 class="heading">SoundScapes</h1>
             <p>Study | Code | Listen</p>
         </div>
         <div class="all-buttons">
             <div class="buttons">
-                <div data-key="49" class="btn btn-1"
-                onclick="playSoundClick1(0); playSoundClick2(1); playSoundClick3(1); playSoundClick4(1); playSoundClick5(1)">
+                <div id="birds" class="playBtn btn">
                     <p>Birds</p>
                 </div>
             </div>
 
             <div class="buttons">
-                <div data-key="50" class="btn btn-2" onclick="playSoundClick1(1); playSoundClick2(0); playSoundClick3(1); playSoundClick4(1); playSoundClick5(1)">
+                <div id="campfire" class="playBtn btn">
                     <p>Campfire</p>
                 </div>
             </div>
 
             <div class="buttons">
-                <div data-key="51" class="btn btn-3" onclick="playSoundClick1(1); playSoundClick2(1); playSoundClick3(0); playSoundClick4(1); playSoundClick5(1)">
+                <div id="forest" class="playBtn btn">
                     <p>Forest</p>
                 </div>
             </div>
 
             <div class="buttons">
-                <div data-key="52" class="btn btn-4" onclick="playSoundClick1(1); playSoundClick2(1); playSoundClick3(1); playSoundClick4(0); playSoundClick5(1)">
+                <div id="ocean" class="playBtn btn">
                     <p>Ocean</p>
                 </div>
             </div>
 
             <div class="buttons">
-                <div data-key="53" class="btn btn-5" onclick="playSoundClick1(1); playSoundClick2(1); playSoundClick3(1); playSoundClick4(1); playSoundClick5(0)">
+                <div id="storm" class="playBtn btn">
                     <p>Storm</p>
                 </div>
             </div>
-        </div><!--all-buttons-->
+        </div>
+        <!--all-buttons-->
         <div class="last-button">
-            <div class="stop-btn" onclick="playSoundClick1(1); playSoundClick2(1); playSoundClick3(1); playSoundClick4(1); playSoundClick5(1)">          
-                <p>Stop</p>  
+            <div id="stop" class="stop-btn">
+                <p>Stop</p>
             </div>
         </div>
-        
-    </div><!--container-->
+
+    </div>
+    <!--container-->
 
 
 
@@ -63,18 +67,24 @@
     <!-- AUDIO -->
 
     <!-- Nature Sounds -->
-    <audio id="audio-1" data-key="49" src="https://raw.githubusercontent.com/zhaluza/soundscapes/master/audio/nature/Bird%20Ambience.mp3"></audio>
-    <audio id="audio-2" data-key="50" src="https://raw.githubusercontent.com/zhaluza/soundscapes/master/audio/nature/Campfire.mp3"></audio>
-    <audio id="audio-3" data-key="51" src="https://raw.githubusercontent.com/zhaluza/soundscapes/master/audio/nature/Forest%202.mp3"></audio>
-    <audio id="audio-4" data-key="52" src="https://raw.githubusercontent.com/zhaluza/soundscapes/master/audio/nature/Ocean%20Waves.mp3"></audio>
-    <audio id="audio-5" data-key="53" src="https://raw.githubusercontent.com/zhaluza/soundscapes/master/audio/nature/Thunderstorm.mp3"></audio>
+    <audio data-key="birds"
+        src="https://raw.githubusercontent.com/zhaluza/soundscapes/master/audio/nature/Bird%20Ambience.mp3"></audio>
+    <audio data-key="campfire"
+        src="https://raw.githubusercontent.com/zhaluza/soundscapes/master/audio/nature/Campfire.mp3"></audio>
+    <audio data-key="forest"
+        src="https://raw.githubusercontent.com/zhaluza/soundscapes/master/audio/nature/Forest%202.mp3"></audio>
+    <audio data-key="ocean"
+        src="https://raw.githubusercontent.com/zhaluza/soundscapes/master/audio/nature/Ocean%20Waves.mp3"></audio>
+    <audio data-key="storm"
+        src="https://raw.githubusercontent.com/zhaluza/soundscapes/master/audio/nature/Thunderstorm.mp3"></audio>
 
     <!-- Lifestyle Sounds -->
 
     <!-- Sci-Fi Sounds -->
     <script src="script.js"></script>
     <footer>
-        <script>  </script>
+        <script> </script>
     </footer>
 </body>
+
 </html>
